@@ -1,0 +1,21 @@
+# Ignore node_modules (don't copy unnecessary dependencies)
+node_modules
+
+# Ignore logs and temp files
+npm-debug.log
+yarn-error.log
+
+# Ignore environment variables file (if any)
+.env
+
+# Ignore build files
+dist
+build
+
+# Ignore Docker-related files
+.dockerignore
+Dockerfile
+
+# Ignore Git files
+.git
+.gitignore

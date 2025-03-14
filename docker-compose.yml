@@ -7,6 +7,12 @@ services:
       - "3000:3000"
     depends_on:
       - db
+    environment:
+      DB_HOST: db
+      DB_USER: myuser
+      DB_PASSWORD: mypassword
+      DB_NAME: mydatabase
+      DB_PORT: 5432
 
   db:
     image: postgres:13
@@ -14,6 +20,8 @@ services:
       POSTGRES_USER: myuser
       POSTGRES_PASSWORD: mypassword
       POSTGRES_DB: mydatabase
+    ports:
+      - "5432:5432"
     volumes:
       - db_data:/var/lib/postgresql/data
 
